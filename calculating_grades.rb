@@ -31,8 +31,6 @@ else
   puts "Desculpe #{nome} #{sobrenome}, voce foi reprovado. Estude mais!"
 end
 
-# como fazer isso usando case e ranges?
-
 puts "\nSua nota final foi #{media_final}"
 
 puts "\n..| Bye"
