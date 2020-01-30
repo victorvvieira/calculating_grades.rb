@@ -37,4 +37,6 @@ puts "\nSua nota final foi #{media_final}"
 
 puts "\n..| Bye"
 
+#salveeeeee
+
 
