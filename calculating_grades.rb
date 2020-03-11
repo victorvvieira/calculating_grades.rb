@@ -7,23 +7,30 @@ nome = gets.chomp
 print 'Digite seu sobrenome: '
 sobrenome = gets.chomp
 
-print "\nQuanto voce tirou na primeira prova?: "
-nota_1 = gets.chomp.to_f
-
-while nota_1 >= 11 || nota_1 < 0 
-  print 'nota invalida, digite novamente: '
-  nota_1 = gets.chomp.to_f
+nota_1 = nil
+loop do
+  print "\nQuanto voce tirou na primeira prova?: "
+  nota_1 = gets.chomp
+  if nota_1.to_f <= 10 && nota_1.to_f >= 0 && nota_1 != ""
+    break
+  else
+    print 'nota invalida, digite novamente'
+  end
 end
 
-print 'Quanto voce tirou na segunda prova?: '
-nota_2 = gets.chomp.to_f
-
-while nota_2 >= 11 || nota_2 < 0
-  print 'nota invalida, digite novamente: '
-  nota_2 = gets.chomp.to_f
+nota_2 = nil
+loop do
+  print "\nQuanto voce tirou na segunda prova?: "
+  nota_2 = gets.chomp
+  if nota_2.to_f <= 10 && nota_2.to_f >= 0 && nota_2 != ""
+    break
+  else
+    print 'nota invalida, digite novamente'
+  end
 end
 
-media_final = (nota_1 + nota_2) / 2 
+soma = nota_1.to_f + nota_2.to_f
+media_final = soma / 2 
 
 if media_final >= 6 && media_final <= 10
   puts "Parabens #{nome} #{sobrenome}, voce foi aprovado!"
@@ -34,6 +41,3 @@ end
 puts "\nSua nota final foi #{media_final}"
 
 puts "\n..| Bye"
-
-
-
